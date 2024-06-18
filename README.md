@@ -20,16 +20,12 @@ Provides a clear indication of whether the water is safe to drink.
 
 water-potability-prediction/
 
-│
-├── model.py 
-
-Script for training the Random Forest model
-
-├── app.py          # Flask application script
-├── model.pkl       # Pickle file containing the trained model
-├── templates/
-│   └── index.html  # HTML file for the web interface
-├── static/
-│   |___ img.png
-├── requirements.txt# List of dependencies
+ - model.py       #Script for training the Random Forest model
+ - app.py          # Flask application script
+ - model.pkl       # Pickle file containing the trained model
+ - templates/
+ - index.html  # HTML file for the web interface
+ - static/
+ - img.png
+   
 
