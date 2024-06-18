@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+<style>
+body {
+  background-image: url({{url_for('static',filename="img.jpg")}});
+ background-size: cover;
+}
+.shadow-textbox {
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        margin-bottom: 15px;
+    }
+.btn {
+padding: 10px 40px;
+  font-size: 16px;
+  margin-right: 300px;
+    }
+.tt {
+padding: 10px 40px;
+  font-size: 16px;
+  margin-left: 100px;
+    }
+
+</style>
+
+</head>
+<body>
+
+    <h1><center>Water Potability Prediction</center></h1>
+    <br>
+    <center>
+    <form action="{{ url_for('predict')}}" method="post">
+        Ph: <input type="text" name="ph"  required="required" class="shadow-textbox"/>&nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+        Hardness: <input type="text" name="Hardness"  required="required" class="shadow-textbox" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+        Solids:	<input type="text" name="Solids"  required="required" class="shadow-textbox" /><br><br>
+
+
+        Chloramines <input type="text" name="Chloramines"  required="required" class="shadow-textbox"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+        Sulfate: <input type="text" name=" Sulfate "  required="required" class="shadow-textbox" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+        Conductivity: <input type="text" name=" Conductivity "  required="required" class="shadow-textbox"/><br><br>
+
+
+        Organic_carbon: <input type="text" name="Organic_carbon "  required="required" class="shadow-textbox"/>&nbsp&nbsp
+
+
+        Trihalomethanes: <input type="text" name="Trihalomethanes " required="required" class="shadow-textbox" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+        Turbidity: <input type="text" name="Turbidity" required="required" class="shadow-textbox" /><br><br><br><br>
+
+
+        <button type="submit" class="btn">Predict</button>
+
+        <button type="reset" class="tt">Clear</button><br>
+    </form>
+
+    <br>
+    <br>
+
+    <b><p style="font-size: 30px;">{{prediction_text}}</p></b>
+
+    </center>
+
+</body>
