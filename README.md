@@ -28,4 +28,9 @@ water-potability-prediction/
  - static/
  - img.png
    
+## Output
+
+![Screenshot 2025-03-22 172408](https://github.com/user-attachments/assets/f094140d-a471-42d3-83e5-f67679381d12)
+
+
 
